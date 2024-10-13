@@ -1,0 +1,103 @@
+/* Yleiset tyylit */
+body {
+    font-family: Georgia serif; /* Määritä Georgia fontiksi koko sivulle */
+    margin: 0;
+    padding: 0;
+    background-color: #e1cbb1; /* Taustaväri koko sivulle */
+}
+
+/* Hamburger valikon tyyli */
+.menu-toggle { 
+    display: none; 
+}
+
+.menu-icon { 
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav ul { 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+}
+
+nav ul li a { 
+    text-align: center;
+}
+
+nav ul li a { 
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover { 
+    background-color: #555;
+}
+
+h1 { 
+    font-size:24;
+    color: #333;
+} 
+
+/* Piilottaa valikon oeltuksena */
+.menu ul { 
+   display: none;
+}
+
+.menu-toggle:checked + .menu-icon + .menu ul { 
+    display: block
+}
+
+/* Profiilikuvan tyyli */
+.profile-photo { 
+    width: 200px; /* Leveys */
+    height: 200px; /* Korkeus */
+    border-radius: 50%; /* Tekee kuvasta pyöreän */
+    object-fit: cover; /*Varmistaa, että kuva pysyy oikeassa mittasuhteessa */
+    display: block; /* Tekee kuvasta lohkotason elementin */
+    margin: 20px auto; /* Keskittää kuvan vaakasuunnassa */
+}
+
+/* Osiotyyli */
+section { 
+    display: none; /* Piilottaa kaikki osiot oletuksena */
+    padding: 20px;
+    background-color: #e1cbb1; /* Taustaväri kaikille osioille */
+}
+
+section:target { 
+    display: block; /* Näyttää vain kohdistetun osion */
+}
+
+/* Näytä vain CV-osio ja sen aliosiott */
+#cv:target,
+#cv:target #work-experience,
+#cv:target #language-skills,
+#cv:target #closing {  /* Varmistaa, että lopputeksti on mukana */
+    display: block;
+}
+
+h1 { 
+    font-size: 24px
+    color: #333;
+}
+
+p { 
+    color: #666
+}
+
+/* Footer-tyyli */
+footer { 
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
